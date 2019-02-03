@@ -1,5 +1,5 @@
 {
-  "name": "jest-electron-runner",
+  "name": "jest-runner-electron",
   "version": "1.0.0",
   "main": "index.js",
   "types": "./types.d.ts",

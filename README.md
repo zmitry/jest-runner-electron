@@ -1,5 +1,9 @@
 # jest electron runner
 
+```
+yarn add jest-runner-electron
+```
+
 This is custom runner and custom environment for jest electron runner.
 What features it includes ?
 
@@ -8,11 +12,11 @@ What features it includes ?
 - Running tests in headless environnement
 - Debugging tests with built in awaiters.
 
-# how to install
+# how to setup
 
 see example folders for working example.
 
-1. install jest and this lib
+1. install jest and jest-runner-electron
 2. add set the following properties in config
 
 ```
@@ -21,8 +25,8 @@ see example folders for working example.
     __REACT_DEVTOOLS_GLOBAL_HOOK__: false,
     ELECTRON_DISABLE_SECURITY_WARNINGS: false
   },
-  runner: "<TBD>/runner.js",
-  testEnvironment: "<TBD>/env.js"
+  runner: "jest-runner-electron/lib/runner.js",
+  testEnvironment: "jest-runner-electron/lib/env.js"
 }
 ```
 
