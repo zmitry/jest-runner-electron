@@ -18,8 +18,11 @@ test("Stepper should have 3 stepps", async () => {
   // set debug after each step
   const { next, getByText } = setup();
   // you can go to the next step by pressing ctrl+enter
+  // here is our debug point
+  await window.jestUtils.debug();
   fireEvent.click(next);
   fireEvent.click(next);
+  // next stop
   await window.jestUtils.debug();
 
   fireEvent.click(next);

@@ -26,6 +26,6 @@
     "typescript": "^3.3.1"
   },
   "scripts": {
-    "test": "ELECTRON_RUNNER_OPEN=true ELECTRON_RUNNER_DEVTOOLS=true jest"
+    "test": "ELECTRON_RUNNER_DEBUG=true jest"
   }
 }
