@@ -34,7 +34,7 @@ see example folders for working example.
 
 # How to debug
 
-![link to video example](https://share.vidyard.com/watch/W6MVKuEw84Kkd1Ti9csK6W?)
+[link to video example](https://share.vidyard.com/watch/W6MVKuEw84Kkd1Ti9csK6W?)
 
 This lib has builtin helpers for debugging tests.
 
