@@ -1,5 +1,4 @@
 # jest electron runner
-
 ```
 yarn add jest-runner-electron
 ```
@@ -11,6 +10,8 @@ What features it includes ?
 - Parallel tests execution
 - Running tests in headless environnement
 - Debugging tests with built in awaiters.
+[link to debugging example](https://share.vidyard.com/watch/W6MVKuEw84Kkd1Ti9csK6W?)
+
 
 # how to setup
 
@@ -34,7 +35,6 @@ see example folders for working example.
 
 # How to debug
 
-[link to video example](https://share.vidyard.com/watch/W6MVKuEw84Kkd1Ti9csK6W?)
 
 This lib has builtin helpers for debugging tests.
 
