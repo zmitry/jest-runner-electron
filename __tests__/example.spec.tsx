@@ -20,6 +20,8 @@ test("Stepper should have 3 stepps", async () => {
   // you can go to the next step by pressing ctrl+enter
   fireEvent.click(next);
   fireEvent.click(next);
+  await window.jestUtils.debug();
+
   fireEvent.click(next);
   expect(getByText("Reset").textContent).toContain("Reset");
 });

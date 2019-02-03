@@ -1,0 +1,26 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./public/index.html",
+    "test": "ELECTRON_RUNNER_DEBUG=true NODE_ENV=test  jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-preset-env": "*",
+    "babel-preset-react-app": "*",
+    "jest": "^24.0.0",
+    "mobx": "*",
+    "mobx-react": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-testing-library": "*"
+  },
+  "devDependencies": {
+    "typescript": "*"
+  }
+}

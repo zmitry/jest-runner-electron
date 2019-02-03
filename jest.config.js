@@ -117,6 +117,8 @@ module.exports = {
   //   "<rootDir>"
   // ],
   globals: {
+    __REACT_DEVTOOLS_GLOBAL_HOOK__: false,
+    ELECTRON_DISABLE_SECURITY_WARNINGS: false,
     "ts-jest": {
       diagnostics: false
     }

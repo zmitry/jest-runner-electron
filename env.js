@@ -34,19 +34,14 @@ class ElectronEnvironment {
   async setup() {
     this.global.jestUtils = {
       debug: async () => {
-        // eslint-disable-next-line no-eval
-        // Set timeout to 4 days
         this.setTimeout(345600000);
-        // Run a debugger (in case Puppeteer has been launched with `{ devtools: true }`)
-        // Run an infinite promise
         return new Promise(resolve => {
-          console.log("\n\n🕵️‍  Code is paused, press enter to resume");
+          console.log("Code is paused, press ctrl+enter to resume");
           function KeyPress(e) {
             // Ensure event is not null
             e = e || window.event;
 
             if ((e.which == 13 || e.keyCode == 13) && e.ctrlKey) {
-              // Ctrl + Z
               resolve();
               console.log("\n\n🕵️‍  Code is resumed");
               document.removeEventListener("keydown", KeyPress);

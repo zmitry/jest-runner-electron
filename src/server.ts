@@ -1,18 +1,19 @@
 import path from "path";
 import { app, BrowserWindow } from "electron";
 
+const { ELECTRON_RUNNER_DEBUG } = process.env;
 function runTests(msg) {
   let runner = new BrowserWindow({
     title: "Jest",
-    show: true,
+    show: !!ELECTRON_RUNNER_DEBUG,
     webPreferences: {
       nodeIntegration: true
     },
     width: 1200,
     height: 800
   });
-  runner.webContents.toggleDevTools();
-  runner.loadURL(`file://${path.resolve("./index.html")}`);
+  ELECTRON_RUNNER_DEBUG && runner.webContents.toggleDevTools();
+  runner.loadURL(`file://${path.join(__dirname, "..", "index.html")}`);
 
   runner.webContents.on("did-finish-load", () => {
     runner.webContents.send("run", msg);

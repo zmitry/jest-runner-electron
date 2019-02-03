@@ -2,6 +2,7 @@
   "name": "jest-electron-runner",
   "version": "1.0.0",
   "main": "index.js",
+  "types": "./types.d.ts",
   "license": "MIT",
   "dependencies": {
     "@jest-runner/core": "^1.0.2",
@@ -25,6 +26,6 @@
     "typescript": "^3.3.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "ELECTRON_RUNNER_OPEN=true ELECTRON_RUNNER_DEVTOOLS=true jest"
   }
 }

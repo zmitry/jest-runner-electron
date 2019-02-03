@@ -28,7 +28,7 @@ ipcRenderer.on(
       const results = await runTest(file, globalConfig, config, resolver);
       sendResults(results, workerID);
     } catch (e) {
-      sendError(e.error, workerID);
+      sendError(e.message + ":\n" + e.stack, workerID);
     }
     window.close();
   }

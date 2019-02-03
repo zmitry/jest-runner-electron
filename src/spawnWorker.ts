@@ -25,7 +25,7 @@ export async function spawnElectronProcess() {
     require("electron") as any,
     [path.join(__dirname, "server.js")],
     {
-      stdio: ["ipc", "inherit", "inherit"],
+      stdio: ["ipc", process.stderr, "inherit"],
       env: process.env,
       detached: true
     }
