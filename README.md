@@ -31,3 +31,11 @@ see example folders for working example.
 ```
 
 3. Optionally you can set ELECTRON_RUNNER_DEBUG if you wish to open dev tools and electron view
+
+# How to debug
+
+This lib has builtin helpers for debugging tests.
+
+1. set env variable ELECTRON_RUNNER_DEBUG=true
+2. set stop point using `await jestUtil.debug()` yeah you have to await it.
+3. run jest with --runInBand parameter
