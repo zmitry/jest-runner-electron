@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": ["dom", "es2015"],
+    "strict": false,
+    "skipLibCheck": true,
+    "outDir": "./lib",
+    "allowJs": false,
+    "esModuleInterop": true,
+    "types": ["jest", "node", "electron"]
+  },
+  "exclude": ["./jest-electron-runner/**"],
+  "include": ["./src/*"]
+}
