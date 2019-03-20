@@ -11,7 +11,7 @@ What features it includes ?
 - Parallel tests execution
 - Running tests in headless environnement
 - Debugging tests with built in awaiters.
-  [link to debugging example](https://share.vidyard.com/watch/W6MVKuEw84Kkd1Ti9csK6W?)
+  [link to debugging example](https://www.useloom.com/share/0b70eb13f12d4350b456ec5e3a0c9f06)
 
 # how to setup
 
