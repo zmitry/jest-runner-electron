@@ -2,7 +2,6 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
-  preset: "ts-jest",
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -144,6 +143,6 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ["<rootDir>/__tests__/**/?(*.)(spec|test).tsx"],
+  testMatch: ["<rootDir>/__tests__/**/?(*.)(spec|test).js"],
   moduleFileExtensions: ["ts", "js", "tsx"]
 };

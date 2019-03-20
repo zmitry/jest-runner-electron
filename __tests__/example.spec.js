@@ -12,24 +12,13 @@ const setup = () => {
   };
 };
 
-declare const jestUtils: any;
 afterEach(cleanup);
-// const debug = window.jestUtils.debug;
 test("Stepper should have 3 stepps", async () => {
-  // set debug after each step
   const { next, getByText } = setup();
-  // you can go to the next step by pressing ctrl+enter
-  // here is our debug point
 
   fireEvent.click(next);
   fireEvent.click(next);
-  // next stop
-
   fireEvent.click(next);
+  debugger;
   expect(getByText("Reset").textContent).toContain("Reset");
-  await jestUtils.debug();
-});
-
-test("hello", async () => {
-  render(React.createElement("h1", null, "hello"));
 });
