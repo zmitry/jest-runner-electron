@@ -15,7 +15,7 @@ What features it includes ?
 
 # how to setup
 
-see example folders for working example.
+see example folder for working solution.
 
 1. install jest and jest-runner-electron
 2. add set the following properties in config
