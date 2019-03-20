@@ -9,7 +9,8 @@
     "outDir": "./lib",
     "allowJs": false,
     "esModuleInterop": true,
-    "types": ["jest", "node", "electron"]
+    "types": ["jest", "node", "electron"],
+    "sourceMap": true
   },
   "exclude": ["./jest-electron-runner/**"],
   "include": ["./src/*"]

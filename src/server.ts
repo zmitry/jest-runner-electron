@@ -12,8 +12,17 @@ function runTests(msg) {
     width: 1200,
     height: 800
   });
-  ELECTRON_RUNNER_DEBUG && runner.webContents.toggleDevTools();
-  runner.loadURL(`file://${path.join(__dirname, "..", "index.html")}`);
+  function open() {
+    runner.loadURL(`file://${path.join(__dirname, "..", "index.html")}`);
+  }
+  if (ELECTRON_RUNNER_DEBUG) {
+    runner.webContents.toggleDevTools();
+    runner.webContents.on("devtools-opened", () => {
+      open();
+    });
+  } else {
+    open();
+  }
 
   runner.webContents.on("did-finish-load", () => {
     runner.webContents.send("run", msg);

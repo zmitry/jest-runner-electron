@@ -12,10 +12,11 @@
     "@types/jest": "^23.3.13",
     "@types/node": "^10.12.21",
     "@types/react": "^16.8.1",
+    "babel-preset-react-app": "^7.0.2",
     "core-js": "^2.6.3",
-    "electron": "4",
-    "jest": "^24.0.0",
-    "jest-runner": "^24.0.0",
+    "electron": "4.1.0",
+    "jest": "^24.5.0",
+    "jest-runner": "^24.5.0",
     "jsdom": "^13.2.0",
     "promise-limit": "^2.7.0",
     "react": "^16.7.0",
@@ -26,6 +27,6 @@
     "typescript": "^3.3.1"
   },
   "scripts": {
-    "test": "ELECTRON_RUNNER_DEBUG=true jest"
+    "test": "ELECTRON_RUNNER_DEBUG=true jest -i"
   }
 }

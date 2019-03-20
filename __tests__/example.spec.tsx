@@ -1,9 +1,10 @@
 import React from "react";
 import { render, fireEvent, cleanup } from "react-testing-library";
 import Stepper from "../testComponent";
+import { debug } from "util";
 
 const setup = () => {
-  const utils = render(<Stepper />);
+  const utils = render(React.createElement(Stepper));
   const next = utils.getByTestId("Next");
   return {
     next,
@@ -11,24 +12,24 @@ const setup = () => {
   };
 };
 
-afterEach(cleanup as any);
-declare const window: any;
+declare const jestUtils: any;
+afterEach(cleanup);
 // const debug = window.jestUtils.debug;
 test("Stepper should have 3 stepps", async () => {
   // set debug after each step
   const { next, getByText } = setup();
   // you can go to the next step by pressing ctrl+enter
   // here is our debug point
-  await window.jestUtils.debug();
+
   fireEvent.click(next);
   fireEvent.click(next);
   // next stop
-  await window.jestUtils.debug();
 
   fireEvent.click(next);
   expect(getByText("Reset").textContent).toContain("Reset");
+  await jestUtils.debug();
 });
 
 test("hello", async () => {
-  render(<h1>hello</h1>);
+  render(React.createElement("h1", null, "hello"));
 });

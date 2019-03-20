@@ -16,7 +16,7 @@ async function makeResolver(config, globalConfig) {
   const moduleMap = await Runtime.createHasteMap(config, {
     maxWorkers: os.cpus().length - 1,
     watchman: globalConfig.watchman
-  }).readModuleMap();
+  } as any).readModuleMap();
   return Runtime.createResolver(config, moduleMap);
 }
 
@@ -25,6 +25,7 @@ ipcRenderer.on(
   async (_, { payload: { file, config, globalConfig }, workerID }) => {
     const resolver = await makeResolver(config, globalConfig);
     try {
+      console.log(file, globalConfig, config);
       const results = await runTest(file, globalConfig, config, resolver);
       sendResults(results, workerID);
     } catch (e) {
