@@ -18,7 +18,7 @@ What features it includes ?
 see example folder for working solution.
 
 1. install jest and jest-runner-electron
-2. add set the following properties in config
+2. add the following properties in the config
 
 ```
 {
@@ -27,7 +27,7 @@ see example folder for working solution.
 }
 ```
 
-3. Optionally you can set ELECTRON_RUNNER_DEBUG if you wish to open dev tools and electron view
+3. Optionally you can set ELECTRON_RUNNER_DEBUG=true if you wish to open dev tools and have debug breakpoints working
 
 # How to debug
 
